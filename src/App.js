@@ -8,9 +8,19 @@ const App = () => {
 
   useEffect(() => setMyArray(initialArray), []);
 
+  const reverseArray = () => {
+    const reversedArray = myArray.reverse()
+    console.log("reverseArray: ", reversedArray)
+    console.log("myArray : ", myArray)
+    console.log("Is myArray mutated and does it match reversedArray? ", reversedArray === myArray)
+    setMyArray(reversedArray)
+  }
+
   return (
     <>
-      Hello!
+      <button onClick={reverseArray}>
+        Reverse Order
+      </button>
       <ChildComponent arrayData={myArray} />
     </>
   );
