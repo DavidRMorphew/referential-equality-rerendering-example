@@ -11,7 +11,7 @@ const App = () => {
   return (
     <>
       Hello!
-      <ChildComponent />
+      <ChildComponent arrayData={myArray} />
     </>
   );
 }

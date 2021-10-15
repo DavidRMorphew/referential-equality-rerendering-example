@@ -1,8 +1,8 @@
-const ChildComponent = (props) => {
+const ChildComponent = ({ arrayData }) => {
     return(
-        <>
-         Child Component!
-        </>
+        <ul>
+            { arrayData.map(obj => <li key={obj.number}>{obj.number}</li>) }
+        </ul>
     )
 }
 
