@@ -8,8 +8,12 @@ const App = () => {
 
   useEffect(() => setMyArray(initialArray), []);
 
+  // Leaving l. 15 uncommented shows the problem. 
+  // Commenting out l. 15 and commenting in l. 16 fixes the problem.
+  
   const reverseArray = () => {
     const reversedArray = myArray.reverse()
+    // const reversedArray = [...myArray].reverse()
     console.log("reverseArray: ", reversedArray)
     console.log("myArray : ", myArray)
     console.log("Is myArray mutated and does it match reversedArray? ", reversedArray === myArray)
